@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <img src="http://pic4.nipic.com/20091217/3885730_124701000519_2.jpg" alt=""/>
+    <img src="http:///img.taopic.com/uploads/allimg/120727/201995-120HG1030762.jpg" alt="">
+    <img src="../images/home_1.png" alt=""> -->
+    <div>1</div>
+    <input type="text" autocomplete="on" autofocus />
+    <input type="checkbox" style="width:400px;height:400px" id="checkbox1"/>
+    <div id="divRadio">
+        <label for="r5"><input id="r5" type="radio" value="0" name="chose">点击试试1</label>  
+        <label for="r6"><input id="r6" type="radio" value="1" name="chose">点击试试2</label>      
+    </div>
+   
+</body>
+<script>
+    // console.log(Object.prototype);
+    // console.log(typeof Object.prototype);
+    // console.log(typeof Object);
+    checkInput.onclick=function(){
+        console.log(this.checked)
+    }
+    
+    function foo(){
+        console.log('inner foo');};
+    console.log(foo.prototype);
+    var fooObj = new foo();//inner foo
+
+console.log(fooObj);//看得到，fooObj也有一个__proto__的属性，那么__proto__是什么呢，
+
+console.log(fooObj.__proto__ === foo.prototype);//true
+</script>
+</html>
